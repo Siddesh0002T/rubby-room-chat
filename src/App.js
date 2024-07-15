@@ -11,6 +11,7 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import ChatStartPage from './components/RRChat/ChatStartPage';
 import RoomChatPage from './components/RRChat/RoomChatPage';
+import ChatRoom from './components/RRChat/ChatRoom';
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
        <Route path="/Contact" element={<Contact />}></Route>
        <Route path='/ChatStartPage' element={<ChatStartPage />}></Route>
        <Route path='/RoomChatPage' element={<RoomChatPage />}></Route>
+       <Route path='/ChatRoom' element={<ChatRoom />}></Route>
+
 
         </Routes>
     </BrowserRouter>
