@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import './Css/RoomChatPage.css';
 
 const RoomChatPage = () => {
   const [roomName, setRoomName] = useState('');
@@ -31,9 +31,10 @@ const RoomChatPage = () => {
     localStorage.setItem('roomName', room); // Save room name to localStorage
     window.location.href = `/RoomChatPage?room=${room}`;
   };
-
+  const username = localStorage.getItem('username')
   return (
     <div className="room-chat-page">
+        <h1 className='wel'>Hello <span className='uname'>{username} !</span></h1>
       <h2>Join or Create a Room</h2>
       <center>
         <form className='form-group-room' onSubmit={handleRoomSubmit}>
