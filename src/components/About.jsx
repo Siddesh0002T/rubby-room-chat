@@ -53,7 +53,7 @@ const About = () => {
             <i className="fas fa-briefcase"></i> Portfolio: <a href="https://siddhuu.vercel.app/">siddhesh0002t.com</a>
           </li>
           <li>
-            <i className="fas fa-envelope"></i> Email: <a href="mailto:Siddeshmore145@gmail.com">siddeshmore145@gmail.com</a>
+            <i className="fas fa-envelope"></i> Email: <a href="mailto:siddeshmore145@gmail.com">siddeshmore145@gmail.com</a>
           </li>
           <li>
             <i className="fas fa-phone"></i> Phone: +91 9527024172
@@ -66,6 +66,22 @@ const About = () => {
           </li>
           <li>
             <i className="fab fa-github"></i> GitHub: <a href="https://github.com/siddesh0002t">Siddesh0002T</a>
+          </li>
+        </ul>
+      </p>
+      <br /><br />
+      <p>
+        Contact Yuvraj Chaudhari:
+        <ul>
+         
+          <li>
+            <i className="fas fa-envelope"></i> Email: <a href="yuvrajsc42@gmail.com">yuvrajsc42@gmail.com</a>
+          </li>
+          <li>
+            <i className="fas fa-phone"></i> Phone: +91 9699674627
+          </li>
+          <li>
+            <i className="fab fa-github"></i> GitHub: <a href="https://github.com/YUVRAJ007137">YUVRAJ007137</a>
           </li>
         </ul>
       </p>
