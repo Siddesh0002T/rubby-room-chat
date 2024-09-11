@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     height: 100vh; /* Full viewport height */
-    background-color: #333; /* Dark background for the chat */
+    background-color: #000; /* Dark background for the chat */
     padding: 10px;
   }
   
@@ -13,18 +13,18 @@
     overflow-y: auto; /* Scrollable area */
     padding: 10px;
     color: #fff; /* White text color */
-    background-color: #444; /* Slightly lighter background for messages */
+    background-color: #000; /* Slightly lighter background for messages */
   }
   
   .date-header {
     font-size: 14px;
-    color: #aaa; /* Light gray color for date headers */
+    color: #FFF; /* Light gray color for date headers */
     margin: 10px 0;
     text-align: center;
   }
   
   .message {
-    background-color: #555; /* Background for messages */
+    background-color: #000; /* Background for messages */
     padding: 10px;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -36,7 +36,7 @@
   
   .message-user {
     font-weight: bold;
-    color: #fff; /* White text color for username */
+    color: #c71ac2; /* White text color for username */
     margin-bottom: 5px;
   }
   
@@ -62,7 +62,8 @@
   .message-input {
     display: flex;
     padding: 10px;
-    background-color: #222; /* Dark background for input area */
+    background-color: #000; /* Dark background for input area */
+    height: 40px;
   }
   
   .message-input input {
@@ -71,6 +72,7 @@
     border: none;
     border-radius: 5px;
     margin-right: 10px;
+    color: #000;
   }
   
   .message-input button {

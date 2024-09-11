@@ -1,36 +1,26 @@
-// src/ChatRoom.js
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { db } from '../../firebaseConfig';
-import { collection, addDoc, serverTimestamp, query, onSnapshot } from 'firebase/firestore';
+import { collection, addDoc, serverTimestamp, query, onSnapshot, orderBy } from 'firebase/firestore';
 import './Css/CR.css'; // Import CSS
-
-const formatDate = (date) => {
-  const today = new Date();
-  const messageDate = new Date(date);
-
-  if (today.toDateString() === messageDate.toDateString()) {
-    return 'Today';
-  } else if (today.getDate() - messageDate.getDate() === 1) {
-    return 'Yesterday';
-  } else {
-    return messageDate.toLocaleDateString();
-  }
-};
 
 const ChatRoom = () => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const [expandedMessageId, setExpandedMessageId] = useState(null);
+  const location = useLocation();
 
-  // Retrieve room name and username from localStorage
-  const roomName = localStorage.getItem('roomName') || '';
+  // Retrieve room name and username from URL parameters
+  const queryParams = new URLSearchParams(location.search);
+  const roomName = queryParams.get('room') || '';
   const username = localStorage.getItem('username') || 'Anonymous';
 
   useEffect(() => {
     if (roomName) {
       // Listen for messages in the room
       const messagesRef = collection(db, 'rooms', roomName, 'messages');
-      const q = query(messagesRef);
+      // Query messages ordered by timestamp in ascending order
+      const q = query(messagesRef, orderBy('timestamp'));
       const unsubscribe = onSnapshot(q, (querySnapshot) => {
         const msgs = [];
         querySnapshot.forEach((doc) => {
@@ -61,6 +51,19 @@ const ChatRoom = () => {
 
   const toggleExpandMessage = (id) => {
     setExpandedMessageId(expandedMessageId === id ? null : id);
+  };
+
+  const formatDate = (date) => {
+    const today = new Date();
+    const messageDate = new Date(date);
+
+    if (today.toDateString() === messageDate.toDateString()) {
+      return 'Today';
+    } else if (today.getDate() - messageDate.getDate() === 1) {
+      return 'Yesterday';
+    } else {
+      return messageDate.toLocaleDateString();
+    }
   };
 
   const groupedMessages = messages.reduce((acc, msg) => {
@@ -103,7 +106,7 @@ const ChatRoom = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <button onClick={handleSendMessage}>Send Message</button>
+        <button onClick={handleSendMessage}>Send</button>
       </div>
     </div>
   );

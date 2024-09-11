@@ -23,18 +23,19 @@ const RoomChatPage = () => {
     }
 
     localStorage.setItem('roomName', roomName); // Save room name to localStorage
-    window.location.href = `/RoomChatPage?room=${roomName}`;
+    window.location.href = `/ChatRoom?room=${encodeURIComponent(roomName)}`;
   };
 
   const handleDefaultRoom = (room) => {
     setRoomName(room);
     localStorage.setItem('roomName', room); // Save room name to localStorage
-    window.location.href = `/RoomChatPage?room=${room}`;
+    window.location.href = `/ChatRoom?room=${encodeURIComponent(room)}`;
   };
-  const username = localStorage.getItem('username')
+
+  const username = localStorage.getItem('username');
   return (
     <div className="room-chat-page">
-        <h1 className='wel'>Hello <span className='uname'>{username} !</span></h1>
+      <h1 className='wel'>Hello <span className='uname'>{username}!</span></h1>
       <h2>Join or Create a Room</h2>
       <center>
         <form className='form-group-room' onSubmit={handleRoomSubmit}>
@@ -51,34 +52,32 @@ const RoomChatPage = () => {
           <button type="submit">Join/Create Room</button>
         </form>
         <div className="default-rooms">
-        <center>
-       
-        </center>
-
-          <table>
-            <tbody>
-              <tr>
-                <td>
-                <button onClick={() => handleDefaultRoom('Gaming')}>Join Gaming</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                <button onClick={() => handleDefaultRoom('Sports')}>Join Sports</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                <button onClick={() => handleDefaultRoom('Music')}>Join Music</button>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                <button onClick={() => handleDefaultRoom('Movies')}>Join Movies</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <center>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <button onClick={() => handleDefaultRoom('Gaming')}>Join Gaming</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button onClick={() => handleDefaultRoom('Sports')}>Join Sports</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button onClick={() => handleDefaultRoom('Music')}>Join Music</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <button onClick={() => handleDefaultRoom('Movies')}>Join Movies</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </center>
         </div>
       </center>
     </div>
