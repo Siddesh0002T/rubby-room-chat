@@ -12,6 +12,8 @@ import Contact from './components/Contact';
 import ChatStartPage from './components/RRChat/ChatStartPage';
 import RoomChatPage from './components/RRChat/RoomChatPage';
 import ChatRoom from './components/RRChat/ChatRoom';
+import AIChat from './components/RRChat/AIChat';
+
 
 function App() {
   return (
@@ -28,8 +30,7 @@ function App() {
        <Route path='/ChatStartPage' element={<ChatStartPage />}></Route>
        <Route path='/RoomChatPage' element={<RoomChatPage />}></Route>
        <Route path='/ChatRoom' element={<ChatRoom />}></Route>
-
-
+       <Route path='/AIChat' element={<AIChat />}></Route>
         </Routes>
     </BrowserRouter>
     <Footer/>

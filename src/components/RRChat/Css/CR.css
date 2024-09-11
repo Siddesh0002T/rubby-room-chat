@@ -1,0 +1,88 @@
+/* src/ChatRoom.css */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    background-color: #333; /* Dark background for the chat */
+    padding: 10px;
+  }
+  
+  .message-list {
+    flex: 1;
+    overflow-y: auto; /* Scrollable area */
+    padding: 10px;
+    color: #fff; /* White text color */
+    background-color: #444; /* Slightly lighter background for messages */
+  }
+  
+  .date-header {
+    font-size: 14px;
+    color: #aaa; /* Light gray color for date headers */
+    margin: 10px 0;
+    text-align: center;
+  }
+  
+  .message {
+    background-color: #555; /* Background for messages */
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+  }
+  
+  .message-user {
+    font-weight: bold;
+    color: #fff; /* White text color for username */
+    margin-bottom: 5px;
+  }
+  
+  .message-text {
+    color: #fff; /* White text color */
+    overflow: hidden;
+    max-height: 40px; /* Initial height of message */
+    transition: max-height 0.3s ease;
+  }
+  
+  .message-text.expanded {
+    max-height: 200px; /* Height when expanded */
+  }
+  
+  .message-timestamp {
+    font-size: 12px;
+    color: #888; /* Light gray color for timestamp */
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .message-input {
+    display: flex;
+    padding: 10px;
+    background-color: #222; /* Dark background for input area */
+  }
+  
+  .message-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .message-input button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e81cff; /* Primary color */
+    color: #fff; /* White text */
+    cursor: pointer;
+  }
+  
+  .message-input button:hover {
+    background-color: #c71ac2; /* Slightly darker color on hover */
+  }
+  

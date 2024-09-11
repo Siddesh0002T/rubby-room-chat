@@ -1,0 +1,13 @@
+.chat-room-info {
+    padding: 10px;
+    background-color: #333;
+    text-align: center;
+}
+
+.chat-room-info h2 {
+    margin: 0;
+}
+
+.chat-room-info p {
+    margin: 5px 0 0;
+}
