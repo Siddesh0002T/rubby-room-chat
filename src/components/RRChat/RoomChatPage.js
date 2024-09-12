@@ -49,7 +49,7 @@ const RoomChatPage = () => {
               required
             />
           </div>
-          <button type="submit">Join/Create Room</button>
+          <button type="submit">Join/Create</button>
         </form>
         <div className="default-rooms">
           <center>
