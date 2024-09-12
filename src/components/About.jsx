@@ -69,7 +69,12 @@ const About = () => {
           </li>
         </ul>
       </p>
-      <br /><br />
+      <br />
+      <h2>About the Developer</h2>
+      <p>
+        This application was developed by Yuvraj Chaudhari, a passionate full stack web developer as well as an experienced Android developer worked with many it companies and he is now a Campus Ambassador at E-Cell IIT Bombay. Yuvraj is currently pursuing a Diploma in Computer Engineering at Government Polytechnic, Murtizapur.
+      </p>
+      <br />
       <p>
         Contact Yuvraj Chaudhari:
         <ul>
@@ -79,6 +84,12 @@ const About = () => {
           </li>
           <li>
             <i className="fas fa-phone"></i> Phone: +91 9699674627
+          </li>
+          <li>
+            <i className="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/yuvraj_chaudhari_007">yuvraj_chaudhari_007</a>
+          </li>
+          <li>
+            <i className="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/yuvraj-chaudhari-72a9072a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Yuvraj Chaudhari</a>
           </li>
           <li>
             <i className="fab fa-github"></i> GitHub: <a href="https://github.com/YUVRAJ007137">YUVRAJ007137</a>
